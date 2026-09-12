@@ -1,0 +1,707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ERP_Product_Overview/">
+      
+      
+        <link rel="next" href="../Technology_Stack_Overview_and_Justification/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Architecture - ERP Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#erp-architecture-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ERP Documentation" class="md-header__button md-logo" aria-label="ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ERP Documentation" class="md-nav__button md-logo" aria-label="ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ERP Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ERP_Product_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenant-hybrid-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Tenant Hybrid Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-registration-and-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Registration and Login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-selection-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company Selection at Login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-based-user-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company-Based User Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-type-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Type Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-based-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription-Based Platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-ui-based-on-business-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic UI Based on Business Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Technology_Stack_Overview_and_Justification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technology Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenant-hybrid-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Tenant Hybrid Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-registration-and-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Registration and Login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-selection-at-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company Selection at Login
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#company-based-user-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company-Based User Permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-type-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Type Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-based-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription-Based Platform
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-ui-based-on-business-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic UI Based on Business Type
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="erp-architecture-overview">ERP Architecture Overview</h1>
+<h2 id="multi-tenant-hybrid-architecture">Multi-Tenant Hybrid Architecture</h2>
+<p>The ERP will be built using a secure multi-tenant hybrid architecture to ensure proper data management, scalability, flexibility, and security.</p>
+<p>During company registration, the company can select its preferred tenancy and data architecture through a simple and user-friendly one-time setup process.</p>
+<p>The available options can include:</p>
+<ul>
+<li>Shared tenancy</li>
+<li>Isolated tenancy with separate or multiple databases</li>
+<li>Completely separated platform architecture</li>
+</ul>
+<p>The selected architecture will be configured during the company setup process based on the company's requirements and subscription plan.</p>
+<p>The system must ensure complete tenant-level security and data isolation according to the selected architecture.</p>
+<h2 id="user-registration-and-login">User Registration and Login</h2>
+<p>The platform will include:</p>
+<ul>
+<li>User registration</li>
+<li>Secure login</li>
+<li>Authentication</li>
+<li>Company registration</li>
+<li>User account management</li>
+<li>Multi-company access</li>
+<li>Company-based permissions</li>
+</ul>
+<p>The initial process will begin with user registration and login, followed by company registration.</p>
+<p>During company registration, the system will collect and configure company-specific information based on the selected business type or business types.</p>
+<h2 id="company-selection-at-login">Company Selection at Login</h2>
+<p>Since a single user can belong to multiple companies, the system must handle login differently depending on how many companies a user is linked to:</p>
+<ul>
+<li>If a user is associated with only one company, the system logs them in directly into that company's workspace.</li>
+<li>If a user is associated with multiple companies, after successful authentication the system will prompt the user with a <strong>company selection screen</strong>, listing all companies they have access to.</li>
+<li>The user must select the specific company they want to work in before proceeding further.</li>
+<li>Once a company is selected, the system loads that company's role, permissions, modules, dashboard, and data context for the session.</li>
+<li>The user can switch companies at any time during their session (for example, via a company switcher in the navigation bar) without needing to log out, and the system will reload the appropriate role, permissions, and data context for the newly selected company.</li>
+<li>All actions, data access, and module visibility during the session will strictly correspond to the currently selected company and the user's role within it.</li>
+</ul>
+<p>This ensures that even though a user's identity is shared across companies, their access, permissions, and data view remain fully isolated and company-specific at all times.</p>
+<h2 id="company-based-user-permissions">Company-Based User Permissions</h2>
+<p>User permissions will be managed at the company level.</p>
+<p>A single user can belong to multiple companies. The same user can have different roles and permissions in different companies.</p>
+<p>For example, a user can be:</p>
+<ul>
+<li>Administrator in one company</li>
+<li>Manager in another company</li>
+<li>Employee in another company</li>
+</ul>
+<p>Therefore, user roles, permissions, access control, and data access will be completely company-based.</p>
+<p>The system must ensure that users can only access the data, modules, features, and actions allowed for their role within the currently selected company.</p>
+<h2 id="business-type-selection">Business Type Selection</h2>
+<p>During company registration, a company can select one or multiple business types based on its requirements.</p>
+<p>For example, a company may operate multiple types of businesses under the same organization.</p>
+<p>Each selected business type can have its own:</p>
+<ul>
+<li>Modules</li>
+<li>Features</li>
+<li>Workflows</li>
+<li>Database configurations</li>
+<li>Database migrations</li>
+<li>Forms</li>
+<li>Permissions</li>
+<li>Business rules</li>
+<li>UI configurations</li>
+</ul>
+<p>If a company selects multiple business types, the system should support and configure all required business modules independently while maintaining a common core ERP system.</p>
+<p>The subscription cost can increase based on:</p>
+<ul>
+<li>Number of selected business types</li>
+<li>Required modules</li>
+<li>Number of branches</li>
+<li>Selected tenancy architecture</li>
+<li>Storage requirements</li>
+<li>AI features</li>
+<li>Additional services</li>
+</ul>
+<h2 id="subscription-based-platform">Subscription-Based Platform</h2>
+<p>The ERP will operate as a subscription-based platform.</p>
+<p>Each company will select an appropriate subscription plan based on its requirements.</p>
+<p>Once a company has an active subscription, its branches can access the modules, features, and services included in the company's subscription.</p>
+<p>The subscription system should support different plans and configurations based on:</p>
+<ul>
+<li>Business type</li>
+<li>Number of business types</li>
+<li>Number of branches</li>
+<li>Number of users</li>
+<li>Required modules</li>
+<li>Storage</li>
+<li>AI features</li>
+<li>Data architecture</li>
+<li>Additional services</li>
+</ul>
+<p>The subscription will be managed at the company level.</p>
+<h2 id="branch-management">Branch Management</h2>
+<p>A company can have one or multiple branches.</p>
+<p>All branches will belong to the same company and can access the features and modules included in the company's subscription.</p>
+<p>Branch-level data, users, permissions, operations, and configurations can be managed separately when required.</p>
+<p>The system should maintain proper company-level and branch-level data separation.</p>
+<h2 id="dynamic-ui-based-on-business-type">Dynamic UI Based on Business Type</h2>
+<p>The user interface and user experience can dynamically change based on the selected business type or business types.</p>
+<p>Common ERP components will remain shared across the platform, while business-specific components can change dynamically.</p>
+<p>The following can be configured based on the business type:</p>
+<ul>
+<li>Dashboard</li>
+<li>Navigation menus</li>
+<li>Modules</li>
+<li>Forms</li>
+<li>Workflows</li>
+<li>Reports</li>
+<li>Screens</li>
+<li>Business processes</li>
+<li>User interface components</li>
+</ul>
+<p>This approach will allow each business to have a more relevant and customized user experience while maintaining a common and scalable ERP platform.</p>
+<p>The system should use a flexible and configurable UI architecture so that UI changes can be made based on business type without creating a completely separate application for every business.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

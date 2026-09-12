@@ -1,0 +1,967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ERP_Architecture/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Technology Stack - ERP Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#technology-stack-overview-justification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ERP Documentation" class="md-header__button md-logo" aria-label="ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ERP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technology Stack
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ERP Documentation" class="md-nav__button md-logo" aria-label="ERP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ERP Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ERP_Product_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ERP_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technology Stack
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technology Stack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-django-django-rest-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend — Django + Django REST Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend — Django + Django REST Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Django
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-django-rest-framework-drf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Django REST Framework (DRF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database — PostgreSQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database — PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching-message-broker-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching &amp; Message Broker — Redis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching &amp; Message Broker — Redis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-queue-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Queue — Celery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Queue — Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Celery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-frontend-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Frontend — Next.js
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Frontend — Next.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Next.js
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-application-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Application — Flutter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Application — Flutter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Flutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-stack-works-well-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Stack Works Well Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-additions-beyond-the-core-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Additions (Beyond the Core Stack)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-django-django-rest-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend — Django + Django REST Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend — Django + Django REST Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Django
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-django-rest-framework-drf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Django REST Framework (DRF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database — PostgreSQL
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database — PostgreSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why PostgreSQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching-message-broker-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caching &amp; Message Broker — Redis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Caching &amp; Message Broker — Redis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Redis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-queue-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Queue — Celery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task Queue — Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Celery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-frontend-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web Frontend — Next.js
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web Frontend — Next.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-nextjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Next.js
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-application-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile Application — Flutter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Application — Flutter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-flutter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Flutter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-stack-works-well-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Stack Works Well Together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-additions-beyond-the-core-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Additions (Beyond the Core Stack)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="technology-stack-overview-justification">Technology Stack — Overview &amp; Justification</h1>
+<h2 id="overview">Overview</h2>
+<p>The platform will be built using the following core technology stack:</p>
+<ul>
+<li><strong>Backend Framework:</strong> Django + Django REST Framework (DRF)</li>
+<li><strong>Database:</strong> PostgreSQL</li>
+<li><strong>Caching &amp; Message Broker:</strong> Redis</li>
+<li><strong>Task Queue / Background Jobs:</strong> Celery</li>
+<li><strong>Web Frontend:</strong> Next.js</li>
+<li><strong>Mobile Application:</strong> Flutter</li>
+</ul>
+<p>Each component has been selected based on the specific requirements of a secure, scalable, multi-tenant, AI-powered ERP platform supporting multiple industries, business types, subscription plans, and dynamic configurations.</p>
+<hr />
+<h2 id="backend-django-django-rest-framework">Backend — Django + Django REST Framework</h2>
+<h3 id="why-django">Why Django</h3>
+<ul>
+<li><strong>Mature and battle-tested</strong> — Django has been used in production for large-scale, data-heavy applications for over a decade, making it a reliable choice for a system handling sensitive business data across many tenants.</li>
+<li><strong>Built-in ORM</strong> — Django's ORM works seamlessly with PostgreSQL and simplifies complex queries, relationships, and migrations, which is critical given the platform's need for company-specific and business-type-specific database structures.</li>
+<li><strong>Built-in authentication &amp; permissions system</strong> — Django's auth framework, combined with custom permission layers, maps well onto the platform's requirement for company-based roles and permissions (a user being Admin in one company and Employee in another).</li>
+<li><strong>Admin interface</strong> — Django's built-in admin panel accelerates internal tooling, support operations, and early-stage back-office management without needing to build custom internal dashboards from scratch.</li>
+<li><strong>Scalable app structure</strong> — Django's app-based architecture aligns naturally with the platform's modular design, where each business type (bakery, hospital, logistics, etc.) can be built as its own pluggable module without disturbing the core system.</li>
+<li><strong>Multi-tenancy support</strong> — Libraries such as <code>django-tenants</code> provide schema-based multi-tenancy on top of PostgreSQL, directly supporting the platform's requirement for shared, isolated, or fully separated tenancy options.</li>
+</ul>
+<h3 id="why-django-rest-framework-drf">Why Django REST Framework (DRF)</h3>
+<ul>
+<li>Provides a clean, well-documented way to expose APIs consumed by both the Next.js web app and the Flutter mobile app.</li>
+<li>Built-in support for serialization, authentication, throttling, and permission classes — all of which are needed for a company-based, role-based access system.</li>
+<li>Large ecosystem of extensions (JWT auth, API documentation via drf-spectacular/Swagger, filtering, pagination) that reduce the need to build common API infrastructure from scratch.</li>
+</ul>
+<hr />
+<h2 id="database-postgresql">Database — PostgreSQL</h2>
+<h3 id="why-postgresql">Why PostgreSQL</h3>
+<ul>
+<li><strong>Proven reliability at scale</strong> — PostgreSQL is widely used for transactional, business-critical systems and handles complex relational data (companies, branches, users, roles, modules, subscriptions) reliably.</li>
+<li><strong>Native multi-tenancy support</strong> — PostgreSQL supports multiple tenancy patterns out of the box:</li>
+<li><strong>Shared database, shared schema</strong> (row-level isolation via tenant ID)</li>
+<li><strong>Shared database, separate schema per tenant</strong></li>
+<li><strong>Separate database per tenant</strong></li>
+</ul>
+<p>This directly matches the platform's requirement to offer shared tenancy, isolated tenancy, or fully separated architecture as configurable options.
+* <strong>JSONB support</strong> — PostgreSQL's JSONB column type allows flexible, semi-structured data storage. This is valuable for the platform's dynamic, business-type-specific configurations, forms, and UI settings — without needing a separate NoSQL database for flexible schemas.
+* <strong>Strong data integrity</strong> — Foreign keys, constraints, and transactional guarantees (ACID compliance) are essential for financial, inventory, and subscription data where accuracy cannot be compromised.
+* <strong>Extensibility</strong> — Extensions like <code>pg_partman</code> (partitioning), <code>pg_stat_statements</code> (query performance monitoring), and full-text search capabilities help the platform scale as data volume grows across industries and tenants.</p>
+<hr />
+<h2 id="caching-message-broker-redis">Caching &amp; Message Broker — Redis</h2>
+<h3 id="why-redis">Why Redis</h3>
+<ul>
+<li><strong>High-performance caching</strong> — Redis reduces database load by caching frequently accessed data (permissions, dashboard data, business-type configurations), which matters significantly in a multi-tenant system serving many companies simultaneously.</li>
+<li><strong>Session management</strong> — Useful for managing user sessions, especially with the platform's multi-company login flow, where a user's currently selected company/session context needs fast, low-latency access.</li>
+<li><strong>Celery broker &amp; result backend</strong> — Redis acts as the message broker between Django and Celery workers, queuing background tasks (report generation, AI processing, notifications, subscription billing) and storing their results.</li>
+<li><strong>Rate limiting &amp; throttling</strong> — Redis is commonly used to implement API rate limiting, which is important for protecting the platform from abuse across multiple tenants and subscription tiers.</li>
+</ul>
+<hr />
+<h2 id="task-queue-celery">Task Queue — Celery</h2>
+<h3 id="why-celery">Why Celery</h3>
+<ul>
+<li><strong>Asynchronous processing</strong> — Many ERP operations (generating reports, running AI-based forecasting, sending notifications, processing bulk data imports, handling subscription renewals) are long-running and should not block the main request-response cycle. Celery offloads these to background workers.</li>
+<li><strong>Scheduled tasks</strong> — Celery Beat supports scheduled/recurring jobs, which are needed for things like subscription renewal checks, recurring reports, data backups, and automated business rule evaluations.</li>
+<li><strong>Scalability</strong> — Celery workers can be scaled independently of the main Django application, allowing the platform to handle spikes in background processing (e.g., end-of-month reporting across many tenants) without affecting live user-facing performance.</li>
+<li><strong>Tenant-aware task design</strong> — Since the platform is multi-tenant, Celery tasks will be designed to always carry explicit tenant/company context, ensuring background jobs never leak data across tenants.</li>
+<li><strong>AI workload offloading</strong> — AI-powered features (predictions, trend analysis, recommendations) can be processed asynchronously via Celery, keeping the platform responsive while intensive computations run in the background.</li>
+</ul>
+<hr />
+<h2 id="web-frontend-nextjs">Web Frontend — Next.js</h2>
+<h3 id="why-nextjs">Why Next.js</h3>
+<ul>
+<li><strong>Component-based architecture</strong> — Fits well with the platform's requirement for a dynamic UI that changes based on business type, since dashboards, forms, and modules can be built as reusable, conditionally rendered components.</li>
+<li><strong>Server-side rendering (SSR) &amp; static generation</strong> — Improves performance and load times for data-heavy dashboards and reports, even though most of the platform sits behind authentication.</li>
+<li><strong>API-friendly</strong> — Integrates cleanly with the DRF backend via REST (or GraphQL, if introduced later), making it straightforward to build company-specific, role-based views.</li>
+<li><strong>Strong ecosystem</strong> — Wide availability of UI libraries, charting tools (for AI-driven analytics and dashboards), and form-building tools that speed up development of industry-specific interfaces.</li>
+<li><strong>Good developer experience &amp; performance</strong> — Fast refresh, built-in routing, and performance optimizations (image optimization, code splitting) help maintain a responsive UI as the platform grows to support many business types and modules.</li>
+</ul>
+<hr />
+<h2 id="mobile-application-flutter">Mobile Application — Flutter</h2>
+<h3 id="why-flutter">Why Flutter</h3>
+<ul>
+<li><strong>Single codebase, multiple platforms</strong> — Flutter allows building for iOS and Android (and potentially desktop) from a single codebase, reducing development and maintenance effort compared to maintaining separate native apps.</li>
+<li><strong>Native-like performance</strong> — Flutter compiles to native ARM code, giving smooth performance for mobile ERP use cases like inventory scanning, POS-style billing, and on-the-go approvals.</li>
+<li><strong>Rich, customizable UI</strong> — Well-suited to the platform's need for dynamic, business-type-specific interfaces, since Flutter's widget system allows highly customized, consistent UI across different industries.</li>
+<li><strong>Strong plugin ecosystem</strong> — Plugins for barcode scanning, offline storage, push notifications, and camera access are valuable for industry-specific use cases (retail billing, warehouse scanning, healthcare record capture, etc.).</li>
+<li><strong>Offline-first capability</strong> — Many target businesses (retail shops, warehouses, field service) require reliable offline functionality; Flutter's local storage and state management options support building offline-first mobile experiences that sync once connectivity is restored.</li>
+</ul>
+<hr />
+<h2 id="why-this-stack-works-well-together">Why This Stack Works Well Together</h2>
+<ul>
+<li><strong>Consistency around PostgreSQL</strong> — Django's ORM, Celery's result backend (optionally), and reporting/analytics all center around a single, reliable relational database, simplifying data consistency across the platform.</li>
+<li><strong>Clear separation of concerns</strong> — Django/DRF handles business logic and APIs, Celery/Redis handle background and asynchronous work, and Next.js/Flutter handle presentation — allowing each layer to scale and evolve independently.</li>
+<li><strong>Proven combination at scale</strong> — Django + PostgreSQL + Redis + Celery is a widely adopted stack for SaaS platforms handling multi-tenancy, background processing, and complex permissions — reducing technical risk for a platform of this scope.</li>
+<li><strong>Room to grow</strong> — The stack supports incremental scaling: starting with a monolithic Django application and shared PostgreSQL database, then evolving toward schema-per-tenant or database-per-tenant, dedicated AI microservices, and distributed Celery workers as the platform grows.</li>
+</ul>
+<hr />
+<h2 id="recommended-additions-beyond-the-core-stack">Recommended Additions (Beyond the Core Stack)</h2>
+<p>While Django, Next.js, Flutter, PostgreSQL, Redis, and Celery form a strong foundation, a few additional components are worth planning for as the platform matures:</p>
+<ul>
+<li><strong>Object storage (S3-compatible)</strong> — for invoices, product images, documents, and generated reports.</li>
+<li><strong>Separate AI/ML service (e.g., FastAPI)</strong> — to isolate AI/forecasting workloads from the core Django application, allowing independent scaling and iteration.</li>
+<li><strong>Search engine (Postgres full-text search initially, OpenSearch/Elasticsearch later)</strong> — for fast search across large, multi-tenant datasets.</li>
+<li><strong>Containerization (Docker) and orchestration (Kubernetes)</strong> — to support dynamic provisioning of tenant schemas/databases and consistent deployment across environments.</li>
+<li><strong>Observability tools (Sentry, Prometheus/Grafana)</strong> — for error tracking and system monitoring across a multi-tenant, multi-service environment.</li>
+<li><strong>CI/CD pipelines</strong> — to support frequent, safe rollout of new business-type modules and platform updates, in line with the platform's phased development approach.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Django, PostgreSQL, Redis, Celery, Next.js, and Flutter together form a proven, scalable, and secure foundation for building a multi-tenant, AI-powered ERP platform. This stack directly supports the platform's core requirements — tenant isolation, company-based permissions, dynamic business-type configuration, subscription management, and background/AI processing — while leaving room to add specialized components (object storage, dedicated AI services, search, observability) as the platform scales across industries and business sizes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
