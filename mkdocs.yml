@@ -1,0 +1,9 @@
+site_name: ERP Documentation
+
+theme:
+  name: material
+
+nav:
+  - Overview: ERP_Product_Overview.md
+  - Architecture: ERP_Architecture.md
+  - Technology Stack: Technology_Stack_Overview_and_Justification.md
