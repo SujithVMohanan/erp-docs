@@ -1,5 +1,7 @@
 site_name: ERP Documentation
 
+docs_dir: docs
+
 theme:
   name: material
 
