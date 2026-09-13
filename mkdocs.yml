@@ -2,6 +2,13 @@ site_name: ERP Documentation
 
 docs_dir: docs
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 theme:
   name: material
 
@@ -15,3 +22,6 @@ nav:
       - Introduction: resil/initial.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
