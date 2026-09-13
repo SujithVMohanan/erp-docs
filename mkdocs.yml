@@ -9,3 +9,9 @@ nav:
   - Overview: ERP_Product_Overview.md
   - Architecture: ERP_Architecture.md
   - Technology Stack: Technology_Stack_Overview_and_Justification.md
+  - Sujith:
+      - ERP Architecture: sujith/erp_architecture_v1.md
+  - Resil:
+      - Introduction: resil/initial.md
+  - Dhamodhar:
+      - Introduction: dhamodhar/initial.md
