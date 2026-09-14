@@ -17,6 +17,9 @@ nav:
   - Architecture: ERP_Architecture.md
   - Technology Stack: Technology_Stack_Overview_and_Justification.md
   - Sujith:
+      - Login Flow: sujith/doc1-loginflow.md
+      - Permissions: sujith/doc2-permissions.md
+      - Tenant Flow: sujith/doc3-tenant-flow.md
       - ERP Architecture: sujith/erp_architecture_v1.md
   - Resil:
       - Introduction: resil/initial.md
