@@ -25,6 +25,8 @@ nav:
       - Introduction: resil/initial.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
+  - Tintu:
+      - Company Onboarding: tintu/doc1-company-onboarding.md
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
