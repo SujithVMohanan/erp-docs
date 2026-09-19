@@ -25,6 +25,7 @@ nav:
       - Introduction: resil/initial.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
+      - Implementation Roadmap and Playbook: dhamodhar/NIYANTHRA_IMPLEMENTATION_ROADMAP_AND_PLAYBOOK.md
   - Tintu:
       - Company Onboarding: tintu/doc1-company-onboarding.md
       - Platform:
