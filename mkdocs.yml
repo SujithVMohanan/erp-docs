@@ -25,7 +25,11 @@ nav:
       - Introduction: resil/initial.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
+      - Market Strategy and Vertical Selection: dhamodhar/NIYANTHRA_MARKET_STRATEGY_AND_VERTICAL_SELECTION.md
+      - Functional Module and Data Architecture Spec: dhamodhar/NIYANTHRA_FUNCTIONAL_MODULE_AND_DATA_ARCHITECTURE_SPEC.md
       - Implementation Roadmap and Playbook: dhamodhar/NIYANTHRA_IMPLEMENTATION_ROADMAP_AND_PLAYBOOK.md
+      - Sign-up, Authentication and Onboarding Specification: dhamodhar/NIYANTHRA_SIGNUP_AUTH_ONBOARDING_SPECIFICATION.md
+      - Workflow and Interconnectivity Specification: dhamodhar/NIYANTHRA_WORKFLOW_INTERCONNECTIVITY_SPECIFICATION.md
   - Tintu:
       - Company Onboarding: tintu/doc1-company-onboarding.md
       - Platform:
