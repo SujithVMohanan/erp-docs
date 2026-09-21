@@ -23,6 +23,9 @@ nav:
       - ERP Architecture: sujith/erp_architecture_v1.md
   - Resil:
       - Introduction: resil/initial.md
+      - ERP Signup Flow: resil/erp_signup_flow.md
+      - ERP Signup Wireframes: resil/erp_signup_wireframes.md
+      - ERP Google Auth Signup: resil/erp_google_auth_signup.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
       - Market Strategy and Vertical Selection: dhamodhar/NIYANTHRA_MARKET_STRATEGY_AND_VERTICAL_SELECTION.md
