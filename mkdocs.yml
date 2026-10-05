@@ -25,6 +25,49 @@ nav:
       - Introduction: resil/initial.md
   - Dhamodhar:
       - Introduction: dhamodhar/initial.md
+      - Market Strategy and Vertical Selection: dhamodhar/NIYANTHRA_MARKET_STRATEGY_AND_VERTICAL_SELECTION.md
+      - Functional Module and Data Architecture Spec: dhamodhar/NIYANTHRA_FUNCTIONAL_MODULE_AND_DATA_ARCHITECTURE_SPEC.md
+      - Implementation Roadmap and Playbook: dhamodhar/NIYANTHRA_IMPLEMENTATION_ROADMAP_AND_PLAYBOOK.md
+      - Sign-up, Authentication and Onboarding Specification: dhamodhar/NIYANTHRA_SIGNUP_AUTH_ONBOARDING_SPECIFICATION.md
+      - Workflow and Interconnectivity Specification: dhamodhar/NIYANTHRA_WORKFLOW_INTERCONNECTIVITY_SPECIFICATION.md
+  - Tintu:
+      - Company Onboarding: tintu/doc1-company-onboarding.md
+      - Platform:
+          - Implementation Assessment: tintu/platform/implementation-assessment.md
+          - Document Engine: tintu/platform/document-engine.md
+          - Workflow Engine: tintu/platform/workflow-engine.md
+          - Document Relationships: tintu/platform/document-relationships.md
+          - Calculation Engine: tintu/platform/calculation-engine.md
+          - Inventory Ledger: tintu/platform/inventory-ledger.md
+          - Posting Engine: tintu/platform/posting-engine.md
+          - Audit: tintu/platform/audit.md
+          - AI Architecture: tintu/platform/ai-architecture.md
+      - Inventory:
+          - Overview: tintu/inventory/overview.md
+          - Workflows: tintu/inventory/workflows.md
+          - State Machine: tintu/inventory/state-machine.md
+          - Business Rules: tintu/inventory/business-rules.md
+          - API: tintu/inventory/api.md
+          - Valuation: tintu/inventory/valuation.md
+          - AI Features: tintu/inventory/ai-features.md
+      - Purchase:
+          - Overview: tintu/purchase/overview.md
+          - Workflows: tintu/purchase/workflows.md
+          - State Machine: tintu/purchase/state-machine.md
+          - Business Rules: tintu/purchase/business-rules.md
+          - API: tintu/purchase/api.md
+          - Calculations: tintu/purchase/calculations.md
+          - Accounting: tintu/purchase/accounting.md
+          - AI Features: tintu/purchase/ai-features.md
+      - Sales:
+          - Overview: tintu/sales/overview.md
+          - Workflows: tintu/sales/workflows.md
+          - State Machine: tintu/sales/state-machine.md
+          - Business Rules: tintu/sales/business-rules.md
+          - API: tintu/sales/api.md
+          - Calculations: tintu/sales/calculations.md
+          - Accounting: tintu/sales/accounting.md
+          - AI Features: tintu/sales/ai-features.md
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
